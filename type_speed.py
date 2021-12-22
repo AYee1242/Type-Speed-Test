@@ -4,7 +4,9 @@ from tkinter import Label, Text, INSERT
 
 # Constants
 BLUE = "#333652"
+LIGHT_BLUE = "#90ADC6"
 WHITE = "#E9EAEC"
+RED = "#ff726f"
 FONT = "Courier"
 
 
@@ -40,7 +42,7 @@ class TypeSpeed:
         self.text.mark_set("insert", "%d.%d" % (1.0, 0.0))
         self.text.tag_add("start", "1.0", "5.0")
         self.text.tag_config("start", background=WHITE, foreground=BLUE)
-        self.text.config(bg="#90ADC6")
+        self.text.config(bg=LIGHT_BLUE)
         self.text.bind("<Key>", self.type_check)
 
         # Timer
@@ -69,11 +71,13 @@ class TypeSpeed:
             self.text.delete(insert)
             self.correct_characters += 1
             self.typed_incorrectly = False
+            self.text.config(bg=LIGHT_BLUE)
         else:
             # Prevent multiple errors for the same word
             if self.typed_incorrectly == False:
                 self.typed_incorrectly = True
                 self.incorrect_words += 1
+                self.text.config(bg=RED)
 
     def final_results(self):
         # Removing unnecessary widgets
