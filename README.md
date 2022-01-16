@@ -1,2 +1,5 @@
 # Type-Speed-Test
-Typing speed calculator GUI built using Tkinter
+
+A GUI to test your typing speed.
+
+Built with Python Tkinter. Words generated from Random Word API.
