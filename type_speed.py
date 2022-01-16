@@ -98,7 +98,7 @@ class TypeSpeed:
             FONT, 30), fg=WHITE, bg=BLUE, padx=20, pady=20)
         wpm_label.grid(column=0, row=1)
 
-        accuracy_label = Label(text=f"Accuracy : {accuracy}%", font=(
+        accuracy_label = Label(text=f"Accuracy : {accuracy}", font=(
             FONT, 30), fg=WHITE, bg=BLUE, padx=20, pady=20)
         accuracy_label.grid(column=0, row=2)
 
